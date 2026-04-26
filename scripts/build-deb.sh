@@ -59,7 +59,10 @@ fpm -s python \
     -n gruyere \
     -v "${VERSION}" \
     --python-bin python3 \
-    --python-package-name-pep503 \
+    -d "python3-psutil" \
+    -d "python3-readchar" \
+    -d "python3-rich" \
+    -d "python3-typer" \
     dist/gruyere-*.whl
 
 echo -e "${GREEN}✓ Build complete!${NC}\n"
